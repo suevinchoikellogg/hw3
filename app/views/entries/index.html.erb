@@ -1,0 +1,11 @@
+<h1>Entry Name</h1>
+
+<ul>
+  <% for entry in @entries %>
+    <li>
+     <%= entry["title"] %><%= entry["description"] %><%= entry["posted_on"] %></a>
+    </li>
+  <% end %>
+</ul>
+
+<p><a href="/entries/new">New Post</a></p>
