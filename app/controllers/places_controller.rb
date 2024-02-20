@@ -18,3 +18,6 @@ class PlacesController < ApplicationController
     redirect_to "/places"
   end
 end
+
+
+# URL: https://3000-suevinchoikellog-hw3-ui84kn1fo4y.ws-us108.gitpod.io/places
