@@ -5,8 +5,8 @@
     <% for entry in @entries %>
       <li>
        <h2><%= entry["title"] %></h2>
+       <h5><%= entry["posted_on"] %></h5>
        <h3><%= entry["description"] %></h3>
-       <p><%= entry["posted_on"] %></p>
       <li>
     <% end %>
   </ul>
