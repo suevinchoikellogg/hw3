@@ -13,21 +13,12 @@
   
   <p>
     <label for="posted_on">Posted on</label>
-    <input type="integer" name="posted_on">
+    <input type="date" name="posted_on">
   </p>
   
   <p>
-    <label for="place_id">Place</label>
-    <input type="text" name="place_id">
+    <input type="hidden" name="place_id" value="<%= @place.id %>">
   </p>
 
   <button>Submit</button>
 </form>
-
-
-<!--
-      t.string "title"
-      t.text "description"
-      t.date "posted_on"
-      t.integer "place_id"
--->

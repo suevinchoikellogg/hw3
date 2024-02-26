@@ -9,11 +9,11 @@ class PlacesController < ApplicationController
   end
 
   def new
+    @place = Place.new
   end
 
   def create
-    @place = Place.new
-    # @places = Place.new(params["place"])
+    @place = Place.new(params["place"])
     @place["name"] = params["name"]
     
     @place.save
@@ -21,6 +21,3 @@ class PlacesController < ApplicationController
     redirect_to "/places"
   end
 end
-
-
-# URL: https://3000-suevinchoikellog-hw3-ui84kn1fo4y.ws-us108.gitpod.io/places

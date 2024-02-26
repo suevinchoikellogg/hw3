@@ -1,23 +1,21 @@
 <h1><%= @place["name"] %></h1>
 
-<ul>
-  <% for entry in @entries %>
-    <li>
-    <%= entry["title"] %>,
-    <%= entry["description"] %>,
-    <%= entry["posted_on"] %>
-    <li>
-  <% end %>
-</ul>
+<% if @entries.any? %>
+  <ul>
+    <% for entry in @entries %>
+      <li>
+       <h2><%= entry["title"] %></h2>
+       <p><%= entry["description"] %></p>
+       <h3><%= entry["posted_on"] %></h3>
+      <li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No posts available.</p>
+<% end %>
 
 <p>
   <a href="/entries/new?place_id=<%= @place["id"] %>">New Post</a>
 </p>
-
-<!--
-<p>
-  <a href="/entries/new">New Post</a>
-</p>
---> 
 
 <p><a href="/places">Back to All Places</a></p>
